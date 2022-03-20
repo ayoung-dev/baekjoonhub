@@ -17,6 +17,9 @@ public class Main{
         
         //결과 출력
         System.out.println(result);
+        
+        //scanner 닫기
+        scanner.close();
 
     }
 }
