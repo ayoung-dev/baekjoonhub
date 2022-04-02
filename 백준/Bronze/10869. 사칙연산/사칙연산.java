@@ -8,13 +8,13 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         
         //첫 번째 숫자 입력 받기
-		int num1 = scanner.nextInt();
+	int num1 = scanner.nextInt();
         
         //두 번째 숫자 입력 받기
-		int num2 = scanner.nextInt();
+	int num2 = scanner.nextInt();
         
-		//더하기
-		System.out.println(num1 + num2);
+	//더하기
+	System.out.println(num1 + num2);
         
         //빼기
         System.out.println(num1 - num2);
@@ -29,6 +29,6 @@ public class Main{
         System.out.println(num1 % num2);
  
         //scanner 닫기
-		scanner.close();
+	scanner.close();
     }
 }
