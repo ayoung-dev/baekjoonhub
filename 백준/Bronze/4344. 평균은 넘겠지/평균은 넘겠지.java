@@ -3,8 +3,8 @@ import java.util.Scanner;
  
 public class Main {
 	public static void main(String[] args) {
-		//scanner 선언
-	    Scanner scanner = new Scanner(System.in);
+	//scanner 선언
+	Scanner scanner = new Scanner(System.in);
         
         //테스트 수 입력 받기
         int testcase = scanner.nextInt();
@@ -43,6 +43,6 @@ public class Main {
         } 
         
         //scanner 닫기
-	    scanner.close();
+	scanner.close();
 	}
 }
