@@ -25,18 +25,19 @@ public class Main{
         
         //덧셈 계산
         for (int i = 0; i < T; i++) {
-            //각 줄 문자 공백으로 분리!!
-			st = new StringTokenizer(br.readLine()," ");
-            //출력
-			bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))+ "\n");
-		}
+		//각 줄 문자 공백으로 분리!!
+		st = new StringTokenizer(br.readLine()," ");
+		//출력
+		bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))+ "\n");
+	}
+	    
         //BufferReader 닫기
-		br.close();
+	br.close();
         
         //Buffer 비우기
-		bw.flush();
+	bw.flush();
         //BufferWriter 닫기
-		bw.close();
+	bw.close();
 
     }
 }
