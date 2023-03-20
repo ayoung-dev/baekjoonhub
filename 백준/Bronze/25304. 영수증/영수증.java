@@ -14,7 +14,6 @@ public class Main{
         
         //결과값 정의
         int sum = 0;
-        String result = "No";
        
         for (int i = 0; i < N; i++){
             int fee = scanner.nextInt();
@@ -23,8 +22,7 @@ public class Main{
             sum += s;
         }
         
-        if (sum == entire)
-            result = "Yes";
+        String result = (sum == entire) ? "Yes" : "No";
         
         //결과 출력
         System.out.println(result);
