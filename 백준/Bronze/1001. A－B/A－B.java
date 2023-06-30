@@ -1,21 +1,22 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException{
+    
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        //첫 번재 숫자 입력 받기
-        int num1 = scanner.nextInt();
+        int num1 = Integer.parseInt(st.nextToken());
         
-        //두 번째 숫자 입력 받기
-        int num2 = scanner.nextInt();
+        int num2 = Integer.parseInt(st.nextToken());
         
-        //결과 출력
-        System.out.println(num1 - num2);
+        int result = num1 - num2;
         
-        //scanner 닫기
-        scanner.close();
+        System.out.println(result);
+        
+        br.close();
+
     }
 }
