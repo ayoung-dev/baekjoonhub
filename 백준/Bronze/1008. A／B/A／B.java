@@ -1,21 +1,19 @@
-//scanner import
 import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+    
+        Scanner sc = new Scanner(System.in);
         
-        //첫 번재 숫자 입력 받기
-        double num1 = scanner.nextDouble();
+        double num1 = sc.nextDouble();
         
-        //두 번째 숫자 입력 받기
-        double num2 = scanner.nextDouble();
+        double num2 = sc.nextDouble();
         
-        //결과 출력
-        System.out.println(num1 / num2);
+        double result = num1 / num2;
         
-        //scanner 닫기
-        scanner.close();
+        System.out.println(result);
+        
+        sc.close();
+
     }
 }
