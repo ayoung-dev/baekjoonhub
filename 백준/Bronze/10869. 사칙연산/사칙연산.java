@@ -1,12 +1,15 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int n1 = sc.nextInt();
-        int n2 = sc.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        int n1 = Integer.parseInt(st.nextToken());
+        int n2 = Integer.parseInt(st.nextToken());
         
         //더하기
         System.out.println(n1 + n2);
@@ -23,6 +26,6 @@ public class Main{
         //나누기 - 나머지
         System.out.println(n1 % n2);
         
-        sc.close();
+        br.close();
     }
 }
