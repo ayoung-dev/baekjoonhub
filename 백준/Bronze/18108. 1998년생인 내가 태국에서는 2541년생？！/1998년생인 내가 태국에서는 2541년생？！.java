@@ -1,18 +1,14 @@
-//Scanner import
 import java.util.Scanner;
 
 public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
         
-        //불기 입력 받기
-        int year = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        //서기로 출력하기
-        System.out.println(year - 543);
+        int y = sc.nextInt();
         
-        //scanner 닫기
-        scanner.close();
+        System.out.println(y - 543);
+        
+        sc.close();
     }
 }
