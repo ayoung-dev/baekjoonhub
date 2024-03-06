@@ -1,34 +1,28 @@
-//scanner import
 import java.util.Scanner;
 
 public class Main{
-    public static void main(String[] args) {
-    
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args){
         
-        //첫 번째 숫자 입력 받기
-		int num1 = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        //두 번째 숫자 입력 받기
-		int num2 = scanner.nextInt();
+        int n1 = sc.nextInt();
+        int n2 = sc.nextInt();
         
-		//더하기
-		System.out.println(num1 + num2);
+        //더하기
+        System.out.println(n1 + n2);
         
         //빼기
-        System.out.println(num1 - num2);
+        System.out.println(n1 - n2);
         
         //곱하기
-        System.out.println(num1 * num2);
+        System.out.println(n1 * n2);
         
         //나누기 - 몫
-        System.out.println(num1 / num2);
+        System.out.println(n1 / n2);
         
         //나누기 - 나머지
-        System.out.println(num1 % num2);
- 
-        //scanner 닫기
-		scanner.close();
+        System.out.println(n1 % n2);
+        
+        sc.close();
     }
 }
