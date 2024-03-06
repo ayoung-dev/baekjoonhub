@@ -1,18 +1,18 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int A = sc.nextInt();
-        int B = sc.nextInt();
+        int A = Integer.parseInt(br.readLine());
+        int B = Integer.parseInt(br.readLine());
         
         System.out.println(A * ((B % 100) % 10));
         System.out.println(A * ((B % 100) / 10));
         System.out.println(A * (B / 100));
         System.out.println(A * B);
         
-        sc.close();
+        br.close();
     }
 }
