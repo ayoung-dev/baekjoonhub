@@ -1,32 +1,19 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException{
         
-        //첫 번째 숫자 입력 받기
-        int A = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        //두 번째 숫자 입력 받기
-        int B = scanner.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        //A > B인 경우
-        if (A > B)
-            System.out.println(">");
+        int A = Integer.parseInt(st.nextToken());
+        int B = Integer.parseInt(st.nextToken());
         
-        //A < B인 경우
-		if (A < B)
-            System.out.println("<");
+        System.out.println((A > B) ? ">" : ((A < B) ? "<" : "=="));
         
-        //A = B인 경우
-		if (A == B)
-            System.out.println("==");
-
+        br.close();
         
-        //scanner 닫기
-        scanner.close();
-
     }
 }
