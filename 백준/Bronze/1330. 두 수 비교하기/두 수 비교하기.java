@@ -17,11 +17,11 @@ public class Main{
             System.out.println(">");
         
         //A < B인 경우
-	if (A < B)
+		if (A < B)
             System.out.println("<");
         
         //A = B인 경우
-	if (A == B)
+		if (A == B)
             System.out.println("==");
 
         
