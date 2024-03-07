@@ -7,7 +7,24 @@ public class Main {
         
         int score = Integer.parseInt(br.readLine());
         
-        System.out.println((score < 60) ? "F" : (score < 70) ? "D" : (score < 80) ? "C" : (score < 90) ? "B" : "A");
+        switch (score / 10) {
+            case 10:
+            case 9:
+                System.out.println("A");
+                break;
+            case 8:
+                System.out.println("B");
+                break;
+            case 7:
+                System.out.println("C");
+                break;
+            case 6:
+                System.out.println("D");
+                break;
+            default:
+                System.out.println("F");
+                break;
+        }
         
         br.close();
             
