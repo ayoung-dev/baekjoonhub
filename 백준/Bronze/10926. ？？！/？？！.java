@@ -7,7 +7,7 @@ public class Main{
         
         String id = br.readLine();
         
-        System.out.println(id + "??!");
+        System.out.println(id.concat("??!"));
         
         br.close();
     }
