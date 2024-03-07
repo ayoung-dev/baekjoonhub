@@ -1,25 +1,16 @@
-//scanner import
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        //첫 번째 숫자 입력 받기
-        long num1 = scanner.nextLong();
+        Scanner sc = new Scanner(System.in);
         
-        //두 번째 숫자 입력 받기
-        long num2 = scanner.nextLong();
+        long A = sc.nextLong();
+        long B = sc.nextLong();
+        long C = sc.nextLong();
         
-        //세 번째 숫자 입력 받기
-        long num3 = scanner.nextLong();
+        System.out.println(A + B + C);
         
-        //계산하기
-        long result = num1 + num2 + num3;
-        
-        //결과 출력
-        System.out.println(result);
-
+        sc.close();
     }
 }
