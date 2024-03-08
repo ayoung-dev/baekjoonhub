@@ -1,27 +1,30 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int H = sc.nextInt();
-        int M = sc.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        if (M < 45){
-            H--;
-            M = 60 - (45 - M);
+        int H = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        
+        if (M >= 45)
+            M -= 45;
+        else {
+            // M = M + 60 - 45
+            M += 15;
             
-            //만약 H가 0보다 작다면
-            if (H < 0)
-                 H = 23; 
-
-            System.out.println(H + " " + M);
-            
-        } else
-            System.out.println(H + " " + (M - 45));
+            if (H < 1)
+                H = 23;
+            else
+                H--;
+        }
         
-        sc.close();
-
+        System.out.println(H + " " + M);
+        
+        br.close();
     }
 }
