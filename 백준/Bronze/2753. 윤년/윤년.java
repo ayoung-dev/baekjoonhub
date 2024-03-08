@@ -1,17 +1,17 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int y = sc.nextInt();
+        int y = Integer.parseInt(br.readLine());
         
         if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0)
             System.out.println(1);
         else
             System.out.println(0);
         
-        sc.close();
+        br.close();
     }
 }
