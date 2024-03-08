@@ -1,37 +1,27 @@
-//scanner import
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        //현재 H 입력 받기
-        int H = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        //현재 M 입력 받기
-        int M = scanner.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+        int C = sc.nextInt();
         
-        //요리 시간 입력 받기
-        int T = scanner.nextInt();
+        A += C / 60;
+        B += C % 60;
         
-        //끝나는 시간 계산
-        //만약 M + T가 60보다 크다면
-        if (M + T > 59){
-            H += (M + T) / 60;
-            M = (M + T) % 60;
-            //만약 H가 23보다 크다면
-            if (H > 23)
-                 H -= 24; 
-            //끝나는 시간 출력
-            System.out.println(H+ " " +M);
+        if (B > 59){
+            A++;
+            B -= 60;
         } 
-        //둘 다 아니라면
-        else
-            System.out.println(H+ " " + (M + T));
         
-        //scanner 닫기
-        scanner.close();
-
+        if (A > 23)
+            A -= 24;
+        
+        System.out.println(A + " " + B);
+        
+        sc.close();
     }
 }
