@@ -1,37 +1,28 @@
-//scanner import
-import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.io.*;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException {
         
-        //주사위 1 입력 받기
-        int dice1 = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        //주사위 2 입력 받기
-        int dice2 = scanner.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        //주사위 3 입력 받기
-        int dice3 = scanner.nextInt();
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
+        int c = Integer.parseInt(st.nextToken());
         
-        //상금 계산
-        //만약 세 주사위의 눈이 같다면
-        if (dice1 == dice2 && dice1 == dice3)
-            System.out.println(10000 + (dice1 * 1000));
-        
-        //두 주사위의 눈이 같다면
-        else if (dice1 == dice2 || dice2 == dice3 ) 
-            System.out.println(1000 + (dice2 * 100));
-        else if (dice1 == dice3)
-            System.out.println(1000 + (dice1 * 100));
-        
-        //세 주사위의 눈이 모두 다르다면
-        else 
-            System.out.println(Math.max(dice1, Math.max(dice2, dice3)) * 100);
-        
-        //scanner 닫기
-        scanner.close();
+        if (a != b && a != c && b != c) {
+            int max = Math.max(a, Math.max(b, c));
+            System.out.println(max * 100);
+        } else if (a == b && a == c) {
+            System.out.println(10000 + a * 1000);
+        } else if (a == b || a == c) {
+            System.out.println(1000 + a * 100);
+        } else
+            System.out.println(1000 + b * 100);
 
+        br.close();
     }
 }
+        
