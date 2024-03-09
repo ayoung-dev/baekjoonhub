@@ -1,11 +1,11 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         
         int sum = 0;
         
@@ -15,6 +15,6 @@ public class Main {
         
         System.out.println(sum);
         
-        sc.close();
+        br.close();
     }
 }
