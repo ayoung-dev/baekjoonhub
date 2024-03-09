@@ -1,34 +1,27 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException {
         
-        //총 금액 입력 받기
-        int entire = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        //갯수 입력 받기
-        int N = scanner.nextInt();
+        int X = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(br.readLine());
         
-        //결과값 정의
         int sum = 0;
-       
-        for (int i = 0; i < N; i++){
-            int fee = scanner.nextInt();
-            int n = scanner.nextInt();
-            int s = fee * n;
-            sum += s;
+        
+        for (int i = 0; i < N; i++) {  
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            
+            sum += (a * b);
         }
         
-        String result = (sum == entire) ? "Yes" : "No";
+        System.out.println(X == sum ? "Yes" : "No");
         
-        //결과 출력
-        System.out.println(result);
-        
-        //scanner 닫기
-        scanner.close();
-
+        br.close();
     }
 }
