@@ -1,14 +1,18 @@
-# [Bronze III] 구구단 - 2739 
+# [Bronze V] 구구단 - 2739 
 
 [문제 링크](https://www.acmicpc.net/problem/2739) 
 
 ### 성능 요약
 
-메모리: 18536 KB, 시간: 236 ms
+메모리: 18492 KB, 시간: 236 ms
 
 ### 분류
 
-사칙연산(arithmetic), 구현(implementation), 수학(math)
+구현, 수학
+
+### 제출 일자
+
+2024년 3월 9일 21:23:34
 
 ### 문제 설명
 
