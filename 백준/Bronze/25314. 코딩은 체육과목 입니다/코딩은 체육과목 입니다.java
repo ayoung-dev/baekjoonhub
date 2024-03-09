@@ -1,21 +1,18 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int N = sc.nextInt();
-        
-        StringBuilder sb = new StringBuilder();
+        int N = Integer.parseInt(br.readLine());
         
         for (int i = 0; i < N / 4; i++) {
-            sb.append("long ");
+            System.out.print("long ");
         }
-        sb.append("int");
         
-        System.out.print(sb);
+        System.out.print("int");
         
-        sc.close();
+        br.close();
     }
 }
