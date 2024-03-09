@@ -1,24 +1,21 @@
-//scanner import
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        int N = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        int result = N / 4;
-
-        for (int i = 0; i < result; i++){
-            System.out.print("long ");
-            
+        int N = sc.nextInt();
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < N / 4; i++) {
+            sb.append("long ");
         }
+        sb.append("int");
         
-        System.out.print("int");
+        System.out.print(sb);
         
-        //scanner 닫기
-        scanner.close();
-
+        sc.close();
     }
 }
