@@ -1,27 +1,20 @@
-//scanner import
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        //N 입력 받기
-        int N = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        //결과값 정의
+        int n = sc.nextInt();
+        
         int sum = 0;
         
-        //1~N까지 덧셈 계산
-        for (int i = N; i > 0; i--){
+        for (int i = 1; i < n + 1; i++) {
             sum += i;
         }
         
-        //결과 출력
         System.out.println(sum);
         
-        //scanner 닫기
-        scanner.close();
-
+        sc.close();
     }
 }
