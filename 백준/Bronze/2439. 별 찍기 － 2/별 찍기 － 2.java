@@ -1,12 +1,12 @@
-import java.util.Scanner;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
         
         StringBuilder sb = new StringBuilder();
         
@@ -18,8 +18,10 @@ public class Main {
             sb.append("\n");
         }
         
-        System.out.print(sb);
+        bw.write(sb.toString());
         
-        sc.close();
+        br.close();
+        bw.flush();
+        bw.close();
     }
 }
