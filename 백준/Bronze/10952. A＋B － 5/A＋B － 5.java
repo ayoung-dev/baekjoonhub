@@ -1,27 +1,27 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException {
         
-        while(true){
-            
-            //A 입력 받기
-            int A = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         
-            //B 입력 받기
-            int B = scanner.nextInt();
+        while(true) {
             
-            if (A == 0 && B == 0)
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
+            
+            if (A == 0) 
                 break;
             
-            System.out.println(A + B);
+            bw.write((A + B) + "\n");
         }
-          
-        //scanner 닫기
-        scanner.close();
-
+        
+        br.close();
+        bw.flush();
+        bw.close();
     }
 }
