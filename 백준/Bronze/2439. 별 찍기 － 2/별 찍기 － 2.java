@@ -1,29 +1,25 @@
-//scanner import
 import java.util.Scanner;
+import java.io.*;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        //N 입력 받기
-        int N = scanner.nextInt();
-
-        //N번 출력 - 줄 
-        for (int i = 1; i < N + 1; i++){
-            //공백 출력
-            for (int k = N; k > i ; k--)
-                System.out.print(" "); 
-           //*N개씩
-            for (int j = 0; j < i; j++)
-                System.out.print("*"); 
-            //줄 바꾸기
-            System.out.println();
+        Scanner sc = new Scanner(System.in);
+        
+        int N = sc.nextInt();
+        
+        StringBuilder sb = new StringBuilder();
+        
+        for (int i = 0; i < N; i++) {
+            for(int j = 0; j < N - (i + 1); j++)
+                sb.append(" ");
+            for(int j = 0; j < i + 1; j++)
+                sb.append("*");
+            sb.append("\n");
         }
-
         
-        //scanner 닫기
-        scanner.close();
-
+        System.out.print(sb);
+        
+        sc.close();
     }
 }
