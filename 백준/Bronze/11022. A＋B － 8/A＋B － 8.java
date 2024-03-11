@@ -1,25 +1,24 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException {
         
-        //T 입력 받기
-        int T = scanner.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        //T만큼 숫자 입력 받기
-        for (int i = 1; i < T + 1; i++){
-            int A = scanner.nextInt();
-            int B = scanner.nextInt();
+        int T = Integer.parseInt(br.readLine());
+        
+        for (int i = 1; i < T + 1; i++) {
             
-            //두 수 더한 값 출력
-            System.out.println("Case #" + i + ": " + A + " + " + B + " = " + (A + B));
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            
+            int A = Integer.parseInt(st.nextToken());
+            int B = Integer.parseInt(st.nextToken());
+            
+            System.out.println("Case #" + i + ": " + A + " + " + B
+                              + " = " + (A + B));
         }
         
-        //scanner 닫기
-        scanner.close();
-
+        br.close();
     }
 }

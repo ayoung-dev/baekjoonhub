@@ -1,14 +1,18 @@
-# [Bronze III] A+B - 8 - 11022 
+# [Bronze V] A+B - 8 - 11022 
 
 [문제 링크](https://www.acmicpc.net/problem/11022) 
 
 ### 성능 요약
 
-메모리: 18952 KB, 시간: 300 ms
+메모리: 16472 KB, 시간: 188 ms
 
 ### 분류
 
-사칙연산(arithmetic), 구현(implementation), 수학(math)
+구현, 사칙연산, 수학
+
+### 제출 일자
+
+2024년 3월 11일 16:37:37
 
 ### 문제 설명
 
