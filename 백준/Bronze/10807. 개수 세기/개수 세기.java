@@ -1,32 +1,27 @@
 import java.util.Scanner;
 
-public class Main{
-    public static void main(String[] args){
+public class Main {
+    public static void main(String[] args) {
         
-        Scanner scan = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
-        //총 갯수
-        int count = scan.nextInt();
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        int count = 0;
         
-        //원하는 정수 갯수
-        int result = 0;
-        
-        //배열
-        int[] arr = new int[count];
-        
-        for(int i = 0; i < count; i++){
-            arr[i] = scan.nextInt();
+        for (int i = 0; i < N; i++) {
+            arr[i] = sc.nextInt();
         }
         
-        //원하는 정수
-        int num = scan.nextInt();
+        int v = sc.nextInt();
         
-        for(int j = 0; j < arr.length; j++){
-            if(num == arr[j]){
-                result++;
+        for (int i = 0; i < arr.length; i++) {
+            if (v == arr[i]) {
+                count++;
             }
         }
+        System.out.println(count);
         
-        System.out.println(result);
+        sc.close();
     }
 }
