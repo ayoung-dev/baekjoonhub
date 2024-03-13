@@ -1,32 +1,23 @@
-//import
 import java.util.Scanner;
-import java.util.Arrays;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) {
         
-        //N 입력 받기
-        int N = scanner.nextInt();
+        Scanner sc = new Scanner(System.in);
         
-        //N개의 수로 이루어진 1차원 배열
-        int[] X = new int[N];
+        int N = sc.nextInt();
+        int[] arr = new int[N];
+        int min = sc.nextInt();
+        int max = min;
         
-        //N개 정수 입력받아서 배열에 넣어주기
-        for (int i = 0; i < N; i++){
-            int x = scanner.nextInt();
-            X[i] = x;
+        for(int i = 1; i < N; i++) {
+            int num = sc.nextInt();
+            min = Math.min(min, num);
+            max = Math.max(max, num);
         }
         
-        //배열 작은 수 부터 정렬
-        Arrays.sort(X);
+        System.out.println(min + " " + max);
         
-        //결과 출력
-        System.out.println(X[0] + " " + X[X.length - 1]);
-        
-        //scanner 닫기
-        scanner.close();
-
+        sc.close();
     }
 }
