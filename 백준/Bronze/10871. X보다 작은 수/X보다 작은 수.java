@@ -1,34 +1,27 @@
-//scanner import
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
-public class Main{
-    public static void main(String[] args){
-        //scanner 선언
-        Scanner scanner = new Scanner(System.in);
+public class Main {
+    public static void main(String[] args) throws IOException {
         
-        //N 입력 받기
-        int N = scanner.nextInt();
-        
-        //X 입력 받기
-        int X = scanner.nextInt();
-        
-        //N개로 이루어진 수열 A 선언
-        int[] A = new int[N];
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        //N개로 이루어진 수열 A 입력
+        int N = Integer.parseInt(st.nextToken());
+        int X = Integer.parseInt(st.nextToken());
+        int[] arr = new int[N];
+        
+        st = new StringTokenizer(br.readLine());
         for (int i = 0; i < N; i++) {
-            int x = scanner.nextInt();
-            A[i] = x;  
+            arr[i] = Integer.parseInt(st.nextToken());
         }
         
-        //수열 A 중 X보다 작은 수 출력
-        for (int j = 0; j < N; j++) {
-            if(A[j] < X)
-                System.out.print(A[j] + " ");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < X) {
+                System.out.print(arr[i] + " ");
+            }
         }
-          
-        //scanner 닫기
-        scanner.close();
-
+        
+        br.close();
     }
 }
