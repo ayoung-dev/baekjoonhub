@@ -1,23 +1,26 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
         int[] arr = new int[N];
-        int min = sc.nextInt();
-        int max = min;
         
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int min = Integer.parseInt(st.nextToken());
+        int max = min;
+
         for(int i = 1; i < N; i++) {
-            int num = sc.nextInt();
+            int num = Integer.parseInt(st.nextToken());
             min = Math.min(min, num);
             max = Math.max(max, num);
         }
         
         System.out.println(min + " " + max);
         
-        sc.close();
+        br.close();
     }
 }
