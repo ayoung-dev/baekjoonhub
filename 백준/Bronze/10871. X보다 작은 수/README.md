@@ -1,4 +1,4 @@
-# [Bronze III] X보다 작은 수 - 10871 
+# [Bronze V] X보다 작은 수 - 10871 
 
 [문제 링크](https://www.acmicpc.net/problem/10871) 
 
@@ -8,7 +8,11 @@
 
 ### 분류
 
-구현(implementation), 수학(math)
+구현
+
+### 제출 일자
+
+2022년 3월 22일 17:02:43
 
 ### 문제 설명
 
