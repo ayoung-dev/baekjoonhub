@@ -10,6 +10,7 @@ public class Main {
         for (int i = 0; i < T; i++) {
             String S = sc.next();
             
+            //char + 연산자 사용하면 아스키코드값이 더해짐!
             System.out.print(S.charAt(0));
             System.out.println(S.charAt(S.length() - 1));
         }
