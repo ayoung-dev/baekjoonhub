@@ -1,21 +1,22 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int N = sc.nextInt();
-        String st = sc.next();
+        //쓰지 않아서 변수로 안 받음
+        br.readLine();
+
         int sum = 0;
         
-        for (int i = 0; i < N; i++) {
-            //아스키코드 값 - '0' = 숫자 값
-            sum += st.charAt(i) - '0';
+        //getBytes() : 문자열을 byte 배열로 변환
+        for (byte value : br.readLine().getBytes()) {
+            sum += value - '0';
         }
         
         System.out.println(sum);
         
-        sc.close();
+        br.close();
     }
 }
