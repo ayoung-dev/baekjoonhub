@@ -3,23 +3,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         
-        int n = scanner.nextInt();
+        int T = sc.nextInt();
         
-        String[] arr = new String[n];
-        
-        for(int i = 0; i < n; i++)
-        {
-            String st = scanner.next();
-            arr[i] = st.substring(0, 1) + st.substring(st.length()-1);
-
-         }
-        scanner.close();
-        
-        for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]);
+        for (int i = 0; i < T; i++) {
+            String S = sc.next();
+            
+            System.out.print(S.charAt(0));
+            System.out.println(S.charAt(S.length() - 1));
         }
-
+        
+        sc.close();
     }
 }
