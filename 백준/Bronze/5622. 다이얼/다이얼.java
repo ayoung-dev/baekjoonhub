@@ -1,57 +1,32 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        
-        Scanner sc = new Scanner(System.in);
-        
-        String S = sc.nextLine();
+    public static void main(String[] args) throws IOException {
         
         int time = 0;
         
-        for (int i = 0; i < S.length(); i++) {
-            switch(S.charAt(i)) {
-                case 'A':
-                case 'B':
-                case 'C':
-                    time += 3;
-                    break;
-                case 'D':
-                case 'E':
-                case 'F':
-                    time += 4;
-                    break;
-                case 'G':
-                case 'H':
-                case 'I':
-                    time += 5;
-                    break;
-                case 'J':
-                case 'K':
-                case 'L':
-                    time += 6;
-                    break;
-                case 'M':
-                case 'N':
-                case 'O':
-                    time += 7;
-                    break;
-                case 'P':
-                case 'Q':
-                case 'R':
-                case 'S':
-                    time += 8;
-                    break;
-                case 'T':
-                case 'U':
-                case 'V':
-                    time += 9;
-                    break;
-                default:
-                    time += 10;
-            }
+        while(true) {
+            int value = System.in.read();
+            
+            if(value == '\n') break;
+            
+            if (value < 68) 
+                time += 3;
+            else if (value < 71)
+                time += 4;
+            else if (value < 74)
+                time += 5;
+            else if (value < 77)
+                time += 6;
+            else if (value < 80)
+                time += 7;
+            else if (value < 84)
+                time += 8;
+            else if (value < 87)
+                time += 9;
+            else 
+                time += 10;
         }
         System.out.println(time);
-        sc.close();
     }
 }
