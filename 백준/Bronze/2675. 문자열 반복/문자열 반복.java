@@ -1,23 +1,26 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         
-        int T = sc.nextInt();
+        int T = Integer.parseInt(br.readLine());
         
         for (int i = 0; i < T; i++) {
-            int R = sc.nextInt();
-            String S = sc.next();
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int R = Integer.parseInt(st.nextToken());
+            String S = st.nextToken();
             
             for(int j = 0; j < S.length(); j++) {
                 for(int k = 0; k < R; k++)
-                    System.out.print(S.charAt(j));
+                    sb.append(S.charAt(j));
             }
-            System.out.print("\n");
+            sb.append("\n");
         }
-        
-        sc.close();
+        System.out.println(sb);
+        br.close();
     }
 }
