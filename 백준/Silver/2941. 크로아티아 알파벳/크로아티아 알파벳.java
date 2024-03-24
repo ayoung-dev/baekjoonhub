@@ -1,11 +1,11 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        String S = sc.nextLine();
+        String S = br.readLine();
         
         String arr[] = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
         
@@ -17,6 +17,6 @@ public class Main {
         
         System.out.println(S.length());
         
-        sc.close();
+        br.close();
     }
 }
