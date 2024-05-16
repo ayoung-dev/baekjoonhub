@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st = new StringTokenizer(br.readLine());
         
-        String N = sc.next();
-        int B = sc.nextInt();
+        String N = st.nextToken();
+        int B = Integer.parseInt(st.nextToken());
         
         int tmp = 1;
         int result = 0;
@@ -25,6 +27,6 @@ public class Main {
         
         System.out.println(result);
         
-        sc.close();
+        br.close();
     }
 }
