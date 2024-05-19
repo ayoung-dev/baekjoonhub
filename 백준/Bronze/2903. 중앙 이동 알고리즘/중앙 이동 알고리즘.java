@@ -1,14 +1,14 @@
-import java.util.Scanner;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
         
         System.out.println((int)Math.pow(Math.pow(2, N) + 1, 2));
         
-        sc.close();
+        br.close();
     }
 }
