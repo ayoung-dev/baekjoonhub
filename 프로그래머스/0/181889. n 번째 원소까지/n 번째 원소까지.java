@@ -7,6 +7,8 @@ class Solution {
             answer[i] = num_list[i];
         }
         
+        //answer = Arrays.copyOfRange(num_list,0,n);
+        
         return answer;
     }
 }
