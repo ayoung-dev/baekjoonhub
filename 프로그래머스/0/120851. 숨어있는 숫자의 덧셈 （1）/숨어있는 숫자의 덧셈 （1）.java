@@ -3,8 +3,8 @@ class Solution {
         
         int answer = 0;
         
-        for (int i = 0; i < my_string.length(); i++){
-            int num = (int) my_string.charAt(i) - '0';
+        for (char ch: my_string.toCharArray()) {
+            int num = (int) ch - '0';
             if (num < 10) {
                 answer += num;
             }
