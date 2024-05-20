@@ -3,17 +3,17 @@ import java.util.Arrays;
 class Solution {
     public int solution(int[] num_list) {
         
-        int sum = 0;
-        int mul = 1;
+        int answer = num_list.length > 10 ? 0 : 1;
         
-        if (num_list.length > 10) {
-            sum = Arrays.stream(num_list).sum();
-            return sum;
-        } else {
-            for (int i: num_list) {
-                mul *= i;
+        for (int i: num_list) {
+            if (num_list.length > 10) {
+                answer += i;
+            } else {
+                answer *= i;
             }
-            return mul;
         }
+        
+        return answer;
     }
 }
+
