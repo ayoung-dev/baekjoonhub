@@ -8,6 +8,6 @@ class Solution {
             sum += i;
         }
         
-        return mul > sum * sum ? 0 : 1;
+        return mul > Math.pow(sum, 2) ? 0 : 1;
     }
 }
