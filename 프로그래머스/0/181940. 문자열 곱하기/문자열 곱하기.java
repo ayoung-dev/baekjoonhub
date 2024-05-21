@@ -8,5 +8,7 @@ class Solution {
         }
         
         return answer.toString();
+        
+        //return my_string.repeat(k);
     }
 }
