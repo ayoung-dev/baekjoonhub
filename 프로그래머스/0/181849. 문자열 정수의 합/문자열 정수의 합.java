@@ -4,7 +4,7 @@ class Solution {
         int sum = 0;
         
         for (char ch: num_str.toCharArray()) {
-            sum += Character.getNumericValue(ch);
+            sum += ch - '0';
         }
         return sum;
     }
