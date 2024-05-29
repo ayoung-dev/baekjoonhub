@@ -4,7 +4,10 @@ class Solution {
         
         for (String s: s1) {
             for (String st: s2) {
-                if (s.equals(st)) count++;
+                if (s.equals(st)) {
+                    count++;
+                    break;
+                }
             }
         }
         return count;
