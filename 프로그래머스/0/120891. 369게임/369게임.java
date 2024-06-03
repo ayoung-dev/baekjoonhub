@@ -4,7 +4,7 @@ class Solution {
         int count = 0;
         
         for (char ch: str.toCharArray()) {
-            if (ch - '0' == 3 || ch - '0' == 6 || ch - '0' == 9) 
+            if (ch == '3'|| ch == '6' || ch == '9') 
                 count++;
         }
         
