@@ -2,6 +2,8 @@ import java.util.*;
 
 class Solution {
     public int[] solution(String my_string) {
+        //my_string = my_string.replaceAll("[a-z]","");
+        
         List<Integer> list = new ArrayList<>();
         
         for (char ch: my_string.toCharArray()) {
