@@ -1,16 +1,23 @@
+import java.util.*;
+
 class Solution {
     public int solution(String s) {
-        int result = 0;
+        int answer = 0;
         
-        String[] str = s.split(" ");
-        for (int i = 0; i < str.length; i++) {
-            if (!"Z".equals(str[i])) {
-                result += Integer.parseInt(str[i]);
+        Stack<Integer> stack = new Stack<>();
+
+        for (String str : s.split(" ")) {
+            if ("Z".equals(str)) {
+                stack.pop();
             } else {
-                result -= Integer.parseInt(str[i - 1]);
+                stack.push(Integer.parseInt(str));
             }
         }
         
-        return result;
+        for (int i : stack) {
+            answer += i;
+        }
+        
+        return answer;
     }
 }
