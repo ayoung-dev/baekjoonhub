@@ -1,14 +1,13 @@
 class Solution {
     public int solution(int[] common) {
-        int x1 = common[0];
-        int x2 = common[1];
-        int x3 = common[2];
+        int x = common[1] - common[0];
+        int y = common[2] - common[1];
         int last = common[common.length - 1];
         
-        if(x3 - x2 == x2 - x1) {
-            return last + (x3 - x2);
+        if(x == y) {
+            return last + x;
         } else {
-            return last * (x3 / x2);
+            return last * (y / x);
         }
     }
 }
