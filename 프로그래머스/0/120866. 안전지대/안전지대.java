@@ -4,7 +4,7 @@ class Solution {
     
     public int solution(int[][] board) {
         length = board.length;
-        temp = new int[length+2][length+2];
+        temp = new int[length + 2][length + 2];
         answer = 0;
         
         for (int i = 0; i < length; i++) {
