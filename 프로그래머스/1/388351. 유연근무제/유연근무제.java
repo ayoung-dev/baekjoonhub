@@ -1,30 +1,18 @@
 class Solution {
     public int solution(int[] schedules, int[][] timelogs, int startday) {
-        int answer = 0;
+        int answer = schedules.length;
         
-        
-        for (int i=0; i<schedules.length; i++) {
-            schedules[i] = calc(schedules[i]) + 10;
-            int start = startday;
-            boolean flag = true;
-            for (int j=0; j<timelogs[i].length; j++) {
-                if (schedules[i] < calc(timelogs[i][j]) && start != 6 && start != 7) {
-                    flag = false;
+        for (int i = 0; i < schedules.length; i++) {
+            for (int j = 0; j < 7; j++) {
+                if ((startday + j) % 7 > 0 && (startday + j) % 7 < 6
+                   && 60 * (timelogs[i][j] / 100) + timelogs[i][j] % 100 > 60 * (schedules[i] / 100) 
+                    + schedules[i]%100+10) {
+                    answer--;
                     break;
                 }
-                if (start == 7) start = 1;
-                else start++;
             }
-            if (flag) answer++;
         }
         
-        
         return answer;
-    }
-    
-    int calc(int time) {
-        int hour = time / 100;
-        int min = time % 100;
-        return hour*60 + min;
     }
 }
