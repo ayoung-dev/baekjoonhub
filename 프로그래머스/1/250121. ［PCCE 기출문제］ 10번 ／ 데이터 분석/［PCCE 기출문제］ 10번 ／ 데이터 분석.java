@@ -10,6 +10,7 @@ class Solution {
         
         if (ext.equals("code")) {
             search = 0;
+            
         } else if (ext.equals("date")) {
             search = 1;
         } else if (ext.equals("maximum")) {
