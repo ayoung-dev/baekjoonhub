@@ -11,7 +11,7 @@ class Solution {
 
         for (; num <= n; level++, answer++){
             if (level % 2 == ori_level) num += gap;
-            else num += (w * 2) - gap;
+            else num += (w*2) - gap;
         }
 
         return answer;
