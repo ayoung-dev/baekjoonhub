@@ -4,7 +4,7 @@ class Solution {
     public int solution(String[] friends, String[] gifts) {
         int answer = 0;
         int friendsLenght = friends.length;
-        HashMap<String, Integer> dic = new HashMap<>();
+        HashMap <String, Integer> dic = new HashMap<>();
         int[] giftDegree = new int[friendsLenght];
         int[][] giftGraph = new int[friendsLenght][friendsLenght];
         
