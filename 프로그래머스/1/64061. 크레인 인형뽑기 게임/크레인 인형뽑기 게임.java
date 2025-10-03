@@ -1,25 +1,27 @@
 import java.util.*;
 class Solution {
     public int solution(int[][] board, int[] moves) {
-        int answer = 0;
-        int len = board[0].length;
-         Stack<Integer> st = new Stack<>();
-         
-        for(int mv:moves){
-            mv -=1;
-            for(int i=0; i<len; i++){  
-                if(board[i][mv] != 0){     
-                    if(st.size() > 0  && st.peek() == board[i][mv] ){  
-                        st.pop();
-                        answer += 2;
-                    }else{
-                         st.push(board[i][mv]); 
+        Stack<Integer> basket = new Stack<>();
+        basket.push(0);
+        int result = 0;
+        
+        for (int i = 0; i < moves.length; i++) {
+            int num = moves[i] - 1;
+            for (int j = 0; j < board.length; j++) {
+                int doll = board[j][num];
+                if (doll > 0) {
+                    if (basket.peek() == doll) {
+                        result += 2;
+                        basket.pop();
+                    } else {
+                        basket.push(doll);
                     }
-                    board[i][mv] = 0; 
-                    break; 
+                    board[j][num] = 0;
+                    break;
                 }
-            }  
-        } 
-        return answer;
+            }
+        }
+        
+        return result;
     }
 }
