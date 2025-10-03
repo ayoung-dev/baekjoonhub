@@ -1,22 +1,23 @@
 import java.util.*;
-
 class Solution {
     public String[] solution(String[] players, String[] callings) {
-        String[] answer = players;
+        Map<String, Integer> rank = new HashMap<>();
         
-        Map<String, Integer> map = new HashMap<>();
-        
-        for(int i=0; i<players.length; i++) map.put(players[i], i);
-        
-        for(int i=0; i<callings.length; i++) {
-            int rank = map.get(callings[i]);
-            String name = answer[rank-1];
-            answer[rank-1] = answer[rank];
-            answer[rank] = name;
-            map.put(answer[rank-1], rank-1);
-            map.put(answer[rank], rank);
+        for (int i = 0; i < players.length; i++) {
+            rank.put(players[i], i);
+        }
+    
+        for (String over: callings) {
+            int num = rank.get(over);
+            
+            String front = players[num - 1];
+            players[num - 1] = over;
+            players[num] = front;
+            
+            rank.put(over, num -1);
+            rank.put(front, num);
         }
         
-        return answer;
+        return players;
     }
 }
