@@ -27,6 +27,6 @@ class Solution {
         int year = Integer.parseInt(date[0]);
         int month = Integer.parseInt(date[1]);
         int day = Integer.parseInt(date[2]);
-        return (year * 12 * 28) + (month * 28) + day;
+        return (year* 12* 28) + (month * 28) + day;
     }
 }
