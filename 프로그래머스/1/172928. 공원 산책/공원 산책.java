@@ -34,7 +34,7 @@ class Solution {
                 if(way.equals("N")){
                     ny--;
                 }
-                if(nx >=0 && ny >=0 && ny < arr.length && nx < arr[0].length){
+                if(nx >=0 && ny >=0 && ny < arr.length && nx <arr[0].length){
                     if(arr[ny][nx] == 'X'){
                         break;
                     }
