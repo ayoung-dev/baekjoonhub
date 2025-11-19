@@ -5,7 +5,7 @@ class Solution {
         int answer = -1;
 
         Arrays.sort(mats);  
-        for (int i = 0; i < mats.length / 2; i++) {  
+        for (int i = 0; i < mats.length/2; i++) {  
             int temp = mats[i];
             mats[i] = mats[mats.length - 1 - i];
             mats[mats.length - 1 - i] = temp;
