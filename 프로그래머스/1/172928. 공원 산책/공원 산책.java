@@ -1,52 +1,60 @@
 class Solution {
     public int[] solution(String[] park, String[] routes) {
-        int sx = 0;
-        int sy = 0;
-        
-        char[][] arr = new char[park.length][park[0].length()];
-        
-        for(int i = 0; i < park.length; i++){
-            arr[i] = park[i].toCharArray();
-            
-            if(park[i].contains("S")){
-                sy = i;
-                sx = park[i].indexOf("S");
+
+        int sRow = -1;
+        int sCol = -1;
+
+        for (int i = 0; i < park.length; i++) {
+            for (int j = 0; j < park[i].length(); j++) {
+                if (park[i].charAt(j) == 'S') {
+                    sRow = i;
+                    sCol = j;
+                    break;
+                }
             }
         }
-    
-        for(String st : routes){
-            String way = st.split(" ")[0];
-            int len = Integer.parseInt(st.split(" ")[1]);
-            
-            int nx = sx;
-            int ny = sy;
-            
-            for(int i = 0; i < len; i++){
-                if(way.equals("E")){
-                    nx++;
+
+        for (String route: routes) {
+            String[] r = route.split(" ");
+            String op = r[0];
+            int num = Integer.parseInt(r[1]);
+
+            int row = sRow;
+            int col = sCol;
+
+            boolean canMove = true;
+
+            for (int k = 1; k <= num; k++) {
+                int nr = sRow;
+                int nc = sCol;
+
+                switch (op) {
+                    case "N": nr = sRow - k; break;
+                    case "S": nr = sRow + k; break;
+                    case "W": nc = sCol - k; break;
+                    case "E": nc = sCol + k; break;
                 }
-                if(way.equals("W")){
-                    nx--;
+                
+                if (nr < 0 || nr >= park.length || nc < 0 || nc >= park[0].length()) {
+                    canMove = false;
+                    break;
                 }
-                if(way.equals("S")){
-                    ny++;
+
+                if (park[nr].charAt(nc) == 'X') {
+                    canMove = false;
+                    break;
                 }
-                if(way.equals("N")){
-                    ny--;
-                }
-                if(nx >=0 && ny >=0 && ny < arr.length && nx <arr[0].length){
-                    if(arr[ny][nx] == 'X'){
-                        break;
-                    }
-                    if(i == len-1){
-                        sx = nx;
-                        sy = ny;
-                    }
-                }
+
+                row = nr;
+                col = nc;
             }
-        }       
-        
-        int[] answer = {sy, sx};
-        return answer;
+
+            if (canMove) {
+                sRow = row;
+                sCol = col;
+            }
+        }
+
+        return new int[]{sRow, sCol};
     }
 }
