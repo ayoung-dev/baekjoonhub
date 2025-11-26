@@ -18,7 +18,7 @@ class Solution {
                 heal = 0;
                 life -= attacks[attackIdx][1];
                 attackIdx++;
-                if (life <= 0) return -1;
+                if (life <=0) return -1;
             }
         }
         return life;
