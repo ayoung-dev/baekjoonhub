@@ -6,6 +6,7 @@ public class Solution {
         for (char ch: str.toCharArray()) {
             sum += Character.getNumericValue(ch);
         }
+        
         return sum;
     }
 }
